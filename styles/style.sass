@@ -1,0 +1,442 @@
+@import 'mixin'
+@import 'animation'
+@import 'menu'
+@import 'cart'
+@import 'catalog'
+@import 'product'
+@import 'registration'
+
+*
+  margin: 0
+  padding: 0
+
+body
+  min-width: 320px
+
+a
+  text-decoration: none
+
+.center
+  padding-left: calc(50% - 570px)
+  padding-right: calc(50% - 570px)
+
+.container
+  max-width: 1140px
+  margin: 0 auto
+
+.header
+  display: flex
+  align-items: center
+  z-index: 6
+  height: 75px
+  background: #222222
+  &__flex
+    width: 100%
+    justify-content: space-between
+    margin: 0
+    display: flex
+    align-items: center
+  &__left
+  &-search
+    margin-left: 41px
+  &__right
+    display: flex
+    align-items: center
+  &__right a:not(:last-child)
+    margin-right: 33px
+
+.promo
+  position: relative
+  display: flex
+  background: #f1e4e6
+
+  &__img
+    display: flex
+    animation: opacity 3.5s
+    width: 50%
+
+  &__photo
+    width: 100%
+
+  &__text
+    position: relative
+    width: 50%
+    display: flex
+    align-items: center
+    .moving-el
+      opacity: 1
+      position: absolute
+      animation: opacity 1s
+      .content
+        animation: moving 2s ease-in-out
+        animation-iteration-count: infinite
+        padding-left: 16px
+        border-left: 12px solid #f16d7f
+
+        &__heading
+          transition: .3s
+          font-family: Lato
+          font-weight: 900
+          font-size: 48px
+
+          color: #222222
+
+        &__p
+          transition: .3s
+          font-family: Lato
+          font-weight: 900
+          font-size: 32px
+
+          color: #222222
+
+      .red-title
+        color: #f16d7f
+
+.sales
+  transition: .3s
+  padding-top: 64px
+  padding-bottom: 96px
+
+  &__top
+    display: flex
+    padding-bottom: 30px
+
+  &__img
+    width: 100%
+
+  &__item:not(:last-child)
+    margin-right: 30px
+
+  &__item
+    position: relative
+
+  &__text
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+  &__heading
+    color: #FFFFFF
+    font-family: Lato
+    font-size: 16px
+    line-height: 19px
+    text-align: center
+
+  &__p
+    font-family: Lato
+    font-size: 24px
+    text-align: center
+    color: #F16D7F
+
+.catalog
+  &__heading
+    text-align: center
+    font-family: Lato
+    font-size: 30px
+    color: #222222
+    margin-bottom: 6px
+    line-height: 36px
+
+  &__title
+    text-align: center
+    font-family: Lato
+    font-size: 14px
+    line-height: 17px
+    color: #9F9F9F
+    padding-bottom: 1 8px
+
+  &__item
+    position: relative
+    display: flex
+    flex-direction: column
+    padding-bottom: 20px
+    max-height: 581px
+    max-width: 360px
+    background: #F8F8F8
+    margin-top: 30px
+    transition: .7s
+  &__item:hover
+    transform: scale(1.02)
+
+  &__item:hover .product__add
+    display: flex
+
+  &__item:hover .catalog__img
+    filter: brightness(40%)
+
+  &__img
+    width: 100%
+    max-height: 420px
+
+  &__container
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+  &__info
+    padding-left: 16px
+    padding-right: 16px
+
+.item__heading
+  display: block
+  text-decoration: none
+  padding-top: 24px
+  font-family: Lato
+  font-size: 13px
+  line-height: 16px
+  color: #000000
+
+.item__text
+  padding-top: 12px
+  font-family: Lato
+  font-weight: 300
+  font-size: 14px
+  line-height: 17px
+  color: #5D5D5D
+
+.item__price
+  padding-top: 18px
+  font-family: Lato
+  font-size: 16px
+  line-height: 19px
+  color: #F16D7F
+
+.product__add
+  transition: 2s
+  animation: go .9s cubic-bezier(.37,1.03,.72,1.16)
+  position: absolute
+  top: 188px
+  left: 111px
+  display: none
+  justify-content: center
+  align-items: center
+  height: 44px
+  width: 139px
+  background-color: transparent
+  border: 1px solid #FFFFFF
+  color: #FFFFFF
+  font-family: Lato
+  font-style: normal
+  font-weight: normal
+  font-size: 14px
+  line-height: 17px
+
+.btn__add
+  display: block
+  margin-right: 11px
+
+.browse__btn
+  transition: .4s
+  box-sizing: border-box
+  padding: 14px 0
+  text-align: center
+  display: block
+  margin: 0 auto
+  height: 48px
+  width: 212px
+  line-height: 100%
+  font-family: Lato
+  font-size: 16px
+  border: 1px solid #F26376
+  background-color: transparent
+  margin-top: 48px
+  cursor: pointer
+  margin-bottom: 95px
+  color: #F26376
+.browse__btn:hover
+  color: #FFF
+  background: #F26376
+.achives
+  background: #222224
+  padding-top: 104px
+  padding-bottom: 104px
+
+  &__container
+    display: flex
+
+  &__item
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+  &__box
+    display: flex
+    height: 40px
+    justify-content: center
+    align-items: center
+
+  &__heading
+    text-align: center
+    padding-top: 28px
+    font-family: Lato
+    font-size: 19.96px
+    line-height: 24px
+    color: #FBFBFB
+
+  &__text
+    text-align: center
+    padding-top: 16px
+    font-family: Lato
+    font-weight: 300
+    font-size: 13.972px
+    line-height: 17px
+    text-align: center
+    color: #FBFBFB
+
+.subscribe
+  background: url('../img/subs_bg.png') left top / cover no-repeat
+
+  &__item
+    display: flex
+    flex-direction: column
+    align-items: center
+    max-width: 359px
+
+  &__text
+    max-width: 359px
+    margin-top: 30px
+    text-align: center
+    font-family: Lato
+    font-size: 20px
+    line-height: 24px
+    color: #222224
+
+.italic__text
+  font-size: 23px
+  font-family: Italic serif
+  line-height: 24px
+  color: #222224
+
+.subscribe__container
+  min-height: 100%
+  padding-top: 97px
+  padding-bottom: 126px
+  display: flex
+  justify-content: space-between
+
+.form
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  width: 557px
+
+  &__field
+    margin-top: 32px
+    display: flex
+
+  &__field .form__text
+    display: block
+    width: 256px
+    height: 36px
+    border: none
+    border-radius: 40px 0 0 40px
+    background: #E1E1E1
+    padding: 7px 22px 6px 22px
+    text-align: left
+
+  &__text:focus
+    outline: none
+
+  &__field .form__btn
+    display: block
+    border: none
+    width: 100px
+    height: 49px
+    border: none
+    border-radius: 0 40px 40px 0
+    background-color: transparent
+    background: #F16D7F
+
+  &__btn:hover
+    background: #E05C6E
+
+  &__btn:focus
+    outline: none
+
+  &__heading,
+
+  &__text
+    font-family: Lato
+    font-weight: 700
+    font-size: 24px
+
+    text-align: center
+    color: #222224
+
+  &__btn
+    color: #FFFFFF
+
+  &__text
+    font-weight: 400
+    font-size: 18px
+
+.footer
+  background-color: #222224
+  display: flex
+  min-height: 79px
+  align-items: center
+  justify-content: space-between
+
+.social
+  display: flex
+
+.copy
+  font-family: Lato
+  font-size: 16px
+  color: #FBFBFB
+
+.social__icons
+  display: flex
+  height: 32px
+  width: 32px
+  background: #FFFFFF
+  justify-content: center
+  align-items: center
+
+  &:not(:last-child)
+    margin-right: 7.3px
+
+  &:hover
+    background: #F16D7F
+
+  &:hover svg path
+    fill: #FFFFFF
+
+.catalog-heading
+  display: flex
+  justify-content: space-between
+  align-items: center
+  background: #F8F3F4
+  height: 148px
+  max-width: 100%
+
+.arrivals
+  font-family: Lato
+  font-size: 24px
+  color: #F16D7F
+
+.crumb
+  font-family: Lato
+  font-weight: 300
+  font-size: 14px
+  line-height: 17px
+  color: #636363
+
+.active
+  color: #F16D7F
+
+.crumb:not(:last-child):after
+
+  content: '/'
+  padding-left: 5px
+
+@import 'm768'
+@import 'm-max768'
+@import 'm425'

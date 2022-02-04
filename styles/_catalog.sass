@@ -1,0 +1,205 @@
+
+.catalog
+    .filter
+        box-sizing: border-box
+        display: flex
+        &__details
+            position: relative
+        &__details[open]
+            .filter__name
+                color: #EF5B70
+            .filter__img
+                path
+                    fill: #EF5B70
+
+        &__name
+            margin-left: 16px
+            z-index: 2
+            display: flex
+            width: 70px
+            align-items: center
+            position: relative
+            font-family: Lato
+            font-size: 14px
+            font-weight: 600
+            text-align: left
+        &__img
+            margin-left: 7px
+        &__category
+            padding-top: 46px
+            top: -13px
+            position: absolute
+            width: 360px
+            z-index: 1
+            background-color: #ffffff
+            -webkit-box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+            box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+            -webkit-box-sizing: border-box
+            box-sizing: border-box
+            padding-right: 17px
+            padding-bottom: 16px
+            &-details
+                margin-top: 24px
+            &__details
+                &__name
+                    display: flex
+                    align-items: center
+                    margin-left: 17px
+                    height: 37px
+                    padding-left: 11px
+                    border-left: 5px solid #EF5B70
+                    border-bottom: 2px solid #EBEBEB
+                    color: #EF5B70
+                    font-family: Lato
+                    font-size: 14px
+                    font-style: normal
+                    font-weight: 400
+                    line-height: 17px
+                    letter-spacing: 0em
+                    text-align: left
+
+        &__ul
+            list-style-type: none
+            padding-top: 24px
+            padding-left: 34px
+        &__list
+            padding-bottom: 11px
+        &__list:last-child
+            padding-bottom: 0
+
+        &__link
+            font-family: Lato
+            font-size: 14px
+            color: #6F6E6E
+
+            &:hover
+                color: #EF5B70
+
+        &__size
+            display: flex
+            padding-left: 320px
+            &-menu
+                padding-left: 30px
+.checkbox
+    display: flex
+    padding-left: 320px
+    &-item
+        display: flex
+        padding-right: 48px
+        font-family: Lato
+        font-size: 14px
+        font-style: normal
+        font-weight: 400
+        line-height: 17px
+        letter-spacing: 0em
+        text-align: left
+        align-content: center
+        cursor: pointer
+        padding-bottom: 5px
+        .after-img::after
+            content: url(../img/catalog/open_down.svg)
+            margin-left: 7px
+        &_menu
+            position: relative
+            .drop-menu
+                margin-right: 9px
+                display: none
+                flex-direction: column
+                position: absolute
+                padding: 9px 30px 11px 9px
+                z-index: 1
+                top: 22px
+                left: -10%
+                width: 79px
+                height: 103px
+                background: #FFFFFF
+                box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+                box-sizing: border-box
+                &__box-label
+                    cursor: pointer
+                    display: flex
+                    height: 1em
+                    margin-bottom: 9px
+                    input[type="checkbox"]
+                        display: none
+                    input[type="checkbox"] + .box
+                        width: 13px
+                        height: 13px
+                        border: 1px solid #EBEBEB
+                        background: url(../img/catalog/tick.svg) left top no-repeat
+                        background-size: 12px
+                        transition: 0.5s
+                    input[type="checkbox"]:checked + .box
+                        width: 13px
+                        height: 13px
+                        background: url(../img/catalog/tick.svg) -19px top no-repeat
+                    .box
+                        display: block
+                        margin-right: 9px
+                    .size-text
+                        font-family: Roboto
+                        font-style: normal
+                        font-weight: normal
+                        font-size: 14px
+                        line-height: 16px
+                        color: #6F6E6E
+        &_menu:hover
+            .drop-menu
+                display: block
+
+.mt
+    margin-top: 59px
+.drop-down
+    margin-left: 10px
+
+.describe
+    font-family: Lato
+    font-size: 14px
+    font-weight: 400
+    line-height: 17px
+    display: flex
+    flex-wrap: nowrap
+    align-items: center
+
+summary
+    display: block
+    outline: none
+    cursor: pointer
+    &::-webkit-details-marker
+        display: none
+
+.pages
+    margin: 48px 0 96px 0
+    &__nav
+        box-sizing: border-box
+        margin: 0 auto
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 44px
+        width: 284px
+        border: 1px solid #EBEBEB
+        border-radius: 3px
+        .page-list
+            margin: 0 17px
+            display: flex
+            list-style-type: none
+            &__li
+                .number
+                    font-family: Lato
+                    font-style: normal
+                    font-weight: 300
+                    font-size: 16px
+                    line-height: 19px
+                    color: #C4C4C4
+                .active-link
+                    color: #EF5B70
+
+            &__li:not(:last-child)
+                margin-right: 23px
+            &__li:nth-child(6)
+                margin: 0
+
+.catalog-heading
+    margin-bottom: 51px
+    max-height: 100%
